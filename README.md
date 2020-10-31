@@ -6,10 +6,10 @@ There are many ways to track working time,
 most of them use GUI or web.
 IMHO, it faster and easier to track time in the terminal.
 
-If you use GitLab, you can enter your working time inside the git commit message as
+If you use GitLab, you can [enter your working time inside the git commit message](https://docs.gitlab.com/ee/user/project/time_tracking.html) as
 
 ```
-/spent 2h
+/spend 2h
 ```
 
 Sometimes you need to track time outside of any git commit.
