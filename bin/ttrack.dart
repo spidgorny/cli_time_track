@@ -85,8 +85,8 @@ void printWeek(Map<Calendar, Duration> perDay, Calendar monday) {
     var weekDay = dow[day.weekday];
     Duration dur = perDay[day] != null ? perDay[day] : Duration();
     String hours = dur.inMinutes > 0 ? printDur(dur) : '--:--';
-    String chart = '▉' * (dur.inMinutes ~/ 15);
-    chart = splitStringByLength(chart, 4).join(' ');
+    String chart = '▉' * (dur.inMinutes ~/ 10);
+    chart = splitStringByLength(chart, 6).join(' ');
     print([day.toString(), weekDay, hours, chart].join('\t'));
   }
   print('');
@@ -97,7 +97,8 @@ List<String> splitStringByLength(String str, int length) {
   RegExp exp = new RegExp(r".{" + "$length" + "}");
   Iterable<Match> matches = exp.allMatches(str);
   var list = matches.map((m) => m.group(0));
-  return list.toList();
+  // print([str.length, length, str.length % length]);
+  return list.toList()..add(str.substring(str.length - str.length % length));
 }
 
 /// https://stackoverflow.com/questions/49393231/how-to-get-day-of-year-week-of-year-from-a-datetime-dart-object
