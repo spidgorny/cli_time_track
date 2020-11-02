@@ -10,7 +10,16 @@ import 'package:date_calendar/date_calendar.dart';
 import '../bin/ttrack.dart';
 
 void main() {
+  test_weekNumber();
+  test_parseDurationOrRange();
+}
+
+void test_weekNumber() {
   var g = GregorianCalendar(2020, 11, 01);
   var week = weekNumber(g);
   assert(week == 44);
+}
+
+void test_parseDurationOrRange() {
+  assert(parseDurationOrRange('[09:30-10:00]') == Duration(minutes: 30));
 }
