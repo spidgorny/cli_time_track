@@ -2,7 +2,7 @@ name: cli_time_track
 description: Time tracking in yaml file.
 repository: https://github.com/spidgorny/cli_time_track
 
-version: 1.0.0+2
+version: 1.0.0+3
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
